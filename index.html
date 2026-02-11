@@ -95,13 +95,6 @@ options: [
 answer: 1,
 rationale: "Vital-sign abnormalities + mental change suggest sepsis. Immediate escalation and infection control are required."
 },
-<!-- ========================= -->
-<!-- SCFHS VITAL SIGN TIE-BREAKER QUESTIONS 7–30 -->
-<!-- ========================= -->
-
-<script>
-const questions = questions.concat([
-
 {
   id: 7,
   level: "EASY",
@@ -115,7 +108,6 @@ const questions = questions.concat([
   correct: 0,
   rationale: "Abnormal RR, low SpO₂, and respiratory distress indicate immediate airway/breathing compromise. SCFHS tie-breaker prioritizes correcting oxygenation before notification or documentation."
 },
-
 {
   id: 8,
   level: "EASY",
@@ -1123,21 +1115,7 @@ const questions = questions.concat([
 
 ];
 
-// Auto-generate remaining questions to reach 100
-while (questions.length < 100) {
-questions.push({
-q: "A patient shows abnormal vital-sign trends indicating instability. What is the nurse’s priority action?",
-options: [
-"Continue monitoring",
-"Provide teaching",
-"Initiate safety intervention and escalate care",
-"Document findings"
-],
-answer: 2,
-rationale: "SCFHS prioritizes immediate intervention when vital signs deteriorate. Observation or teaching delays life-saving action."
-});
 }
-
 function startExam(){
 document.getElementById("startScreen").classList.add("hidden");
 document.getElementById("exam").classList.remove("hidden");
