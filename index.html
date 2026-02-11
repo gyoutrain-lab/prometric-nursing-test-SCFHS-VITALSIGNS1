@@ -95,7 +95,1032 @@ options: [
 answer: 1,
 rationale: "Vital-sign abnormalities + mental change suggest sepsis. Immediate escalation and infection control are required."
 },
-/* ========= QUESTIONS 6–100 (VITAL-SIGN VARIATIONS) ========= */
+<!-- ========================= -->
+<!-- SCFHS VITAL SIGN TIE-BREAKER QUESTIONS 7–30 -->
+<!-- ========================= -->
+
+<script>
+const questions = questions.concat([
+
+{
+  id: 7,
+  level: "EASY",
+  question: "A 68-year-old male with pneumonia is receiving oxygen at 2 L/min via nasal cannula. Vital signs: RR 32/min, SpO₂ 89%, HR 118 bpm, BP 132/78 mmHg. The patient is restless and using accessory muscles. What is the nurse’s PRIORITY action?",
+  options: [
+    "Increase oxygen flow rate",
+    "Notify the physician",
+    "Encourage coughing and deep breathing",
+    "Document findings and reassess later"
+  ],
+  correct: 0,
+  rationale: "Abnormal RR, low SpO₂, and respiratory distress indicate immediate airway/breathing compromise. SCFHS tie-breaker prioritizes correcting oxygenation before notification or documentation."
+},
+
+{
+  id: 8,
+  level: "EASY",
+  question: "A postoperative patient reports dizziness when standing. Vital signs show BP 88/56 mmHg, HR 110 bpm, RR 18/min, SpO₂ 96%. What is the MOST appropriate initial nursing action?",
+  options: [
+    "Assist the patient back to bed",
+    "Notify the surgeon",
+    "Administer IV fluids",
+    "Document orthostatic hypotension"
+  ],
+  correct: 0,
+  rationale: "Hypotension with symptoms indicates compromised circulation. Immediate safety intervention takes priority before escalation or treatment."
+},
+
+{
+  id: 9,
+  level: "EASY",
+  question: "A patient receiving IV opioids has RR 10/min, SpO₂ 91%, HR 72 bpm, BP 128/76 mmHg. The patient is difficult to arouse. What should the nurse do FIRST?",
+  options: [
+    "Stimulate the patient and assess airway",
+    "Administer naloxone",
+    "Notify the physician",
+    "Document findings"
+  ],
+  correct: 0,
+  rationale: "SCFHS prioritizes airway and breathing assessment before antidote administration unless respiratory arrest is present."
+},
+
+{
+  id: 10,
+  level: "EASY",
+  question: "A client with sepsis has a temperature of 39.4°C, HR 122 bpm, RR 28/min, BP 90/54 mmHg. Which finding MOST indicates a life-threatening condition?",
+  options: [
+    "Fever",
+    "Tachycardia",
+    "Hypotension",
+    "Tachypnea"
+  ],
+  correct: 2,
+  rationale: "Hypotension reflects failing circulation and impending shock, which is a key SCFHS safety tie-breaker."
+},
+
+{
+  id: 11,
+  level: "MEDIUM",
+  question: "A 72-year-old client with heart failure gains 2 kg in 24 hours. Vital signs: BP 146/88 mmHg, HR 92 bpm, RR 22/min, SpO₂ 94%. What is the nurse’s BEST initial action?",
+  options: [
+    "Assess lung sounds and edema",
+    "Notify the provider immediately",
+    "Restrict fluids",
+    "Administer diuretics"
+  ],
+  correct: 0,
+  rationale: "The tie-breaker here is assessment before intervention. The patient is stable; SCFHS prioritizes data validation."
+},
+
+{
+  id: 12,
+  level: "MEDIUM",
+  question: "A diabetic patient is confused and diaphoretic. Vital signs: HR 108 bpm, BP 134/82 mmHg, RR 20/min, SpO₂ 97%. What should the nurse do FIRST?",
+  options: [
+    "Check blood glucose level",
+    "Administer insulin",
+    "Call the physician",
+    "Document findings"
+  ],
+  correct: 0,
+  rationale: "Altered mental status with sympathetic signs suggests hypoglycemia. Assessment precedes treatment."
+},
+
+{
+  id: 13,
+  level: "MEDIUM",
+  question: "A postoperative patient has a pain score of 8/10. Vital signs: BP 168/96 mmHg, HR 104 bpm, RR 22/min. What explains these vital-sign changes?",
+  options: [
+    "Pain-induced sympathetic response",
+    "Fluid overload",
+    "Infection",
+    "Medication reaction"
+  ],
+  correct: 0,
+  rationale: "SCFHS often tests interpretation of vital signs. Pain causes transient hypertension and tachycardia."
+},
+
+{
+  id: 14,
+  level: "MEDIUM",
+  question: "A patient with COPD has RR 26/min, SpO₂ 90% on room air, HR 96 bpm, BP 128/82 mmHg. The patient is alert. What is the nurse’s priority?",
+  options: [
+    "Apply low-flow oxygen",
+    "Prepare for intubation",
+    "Document baseline status",
+    "Encourage oral fluids"
+  ],
+  correct: 0,
+  rationale: "Mild hypoxemia with increased RR requires controlled oxygen. SCFHS avoids premature escalation."
+},
+
+{
+  id: 15,
+  level: "MEDIUM",
+  question: "A patient receiving blood transfusion develops HR 126 bpm, BP 88/50 mmHg, RR 30/min, and chills. What is the nurse’s FIRST action?",
+  options: [
+    "Stop the transfusion",
+    "Notify the physician",
+    "Administer antipyretics",
+    "Document the reaction"
+  ],
+  correct: 0,
+  rationale: "This is a suspected transfusion reaction. Safety protocol mandates stopping transfusion immediately."
+},
+
+{
+  id: 16,
+  level: "HARD",
+  question: "A terminally ill patient has BP 82/48 mmHg, HR 118 bpm, RR 10/min, SpO₂ 88%. The patient has a DNR order. What should guide the nurse’s action?",
+  options: [
+    "Provide comfort-focused care",
+    "Initiate CPR",
+    "Call a code blue",
+    "Administer vasopressors"
+  ],
+  correct: 0,
+  rationale: "SCFHS integrates ethics with vital signs. DNR directs comfort care despite abnormal vitals."
+},
+
+{
+  id: 17,
+  level: "HARD",
+  question: "A nurse notes a sudden BP drop to 78/40 mmHg after antihypertensive administration. What legal principle applies if the nurse fails to act?",
+  options: [
+    "Negligence",
+    "Assault",
+    "Battery",
+    "Defamation"
+  ],
+  correct: 0,
+  rationale: "Failure to respond to critical vital-sign changes constitutes negligence under nursing law."
+}, 
+{
+  id: 16,
+  level: "HARD",
+  question: "A terminally ill patient has BP 82/48 mmHg, HR 118 bpm, RR 10/min, SpO₂ 88%. The patient has a DNR order. What should guide the nurse’s action?",
+  options: [
+    "Provide comfort-focused care",
+    "Initiate CPR",
+    "Call a code blue",
+    "Administer vasopressors"
+  ],
+  correct: 0,
+  rationale: "SCFHS integrates ethics with vital signs. DNR directs comfort care despite abnormal vitals."
+},
+
+{
+  id: 17,
+  level: "HARD",
+  question: "A nurse notes a sudden BP drop to 78/40 mmHg after antihypertensive administration. What legal principle applies if the nurse fails to act?",
+  options: [
+    "Negligence",
+    "Assault",
+    "Battery",
+    "Defamation"
+  ],
+  correct: 0,
+  rationale: "Failure to respond to critical vital-sign changes constitutes negligence under nursing law."
+},
+{
+  id: 31,
+  level: "MEDIUM-HARD",
+  question: "A patient’s BP is 96/60 mmHg, HR 102 bpm, RR 18/min, SpO₂ 96%. The patient is alert and asymptomatic. What is the most appropriate nursing action?",
+  options: [
+    "Continue monitoring and reassess trends",
+    "Activate emergency response",
+    "Administer IV fluids immediately",
+    "Document and take no further action"
+  ],
+  correct: 0,
+  rationale: "SCFHS tests judgment: borderline vitals without symptoms require monitoring, not emergency escalation."
+},
+
+{
+  id: 32,
+  level: "MEDIUM-HARD",
+  question: "A postoperative patient reports pain 8/10. Vitals are BP 148/88 mmHg, HR 104 bpm, RR 20/min. What should the nurse do FIRST?",
+  options: [
+    "Assess pain characteristics and contributing factors",
+    "Administer prescribed opioid immediately",
+    "Notify the physician",
+    "Document the pain score"
+  ],
+  correct: 0,
+  rationale: "SCFHS penalizes skipping assessment. Pain-related vital changes require evaluation before intervention."
+},
+
+{
+  id: 33,
+  level: "MEDIUM-HARD",
+  question: "A patient’s temperature is 38.2°C (100.8°F) six hours after surgery. HR is 98 bpm, BP stable. What is the best nursing action?",
+  options: [
+    "Encourage incentive spirometry and reassess",
+    "Initiate sepsis protocol",
+    "Administer antipyretics immediately",
+    "Notify the surgeon urgently"
+  ],
+  correct: 0,
+  rationale: "Early postoperative fever is often atelectasis. SCFHS favors conservative assessment-based interventions."
+},
+
+{
+  id: 34,
+  level: "MEDIUM-HARD",
+  question: "A patient with COPD has SpO₂ 90% on room air and denies distress. What is the nurse’s most appropriate action?",
+  options: [
+    "Assess baseline oxygen saturation history",
+    "Apply high-flow oxygen",
+    "Activate emergency response",
+    "Document and ignore"
+  ],
+  correct: 0,
+  rationale: "SCFHS tests condition-specific norms. COPD patients may have lower baseline SpO₂."
+},
+
+{
+  id: 35,
+  level: "MEDIUM-HARD",
+  question: "A patient receiving IV fluids has crackles at lung bases, BP 118/72 mmHg, HR 88 bpm. What should the nurse do FIRST?",
+  options: [
+    "Assess intake/output and lung sounds trend",
+    "Stop IV fluids immediately",
+    "Notify the provider",
+    "Document findings only"
+  ],
+  correct: 0,
+  rationale: "Judgment trap: assessment precedes stopping therapy unless acute distress is present."
+},
+
+{
+  id: 36,
+  level: "MEDIUM-HARD",
+  question: "A patient reports dizziness when standing. Supine BP is 132/78 mmHg, standing BP is 110/64 mmHg. What is the nurse’s next action?",
+  options: [
+    "Implement orthostatic hypotension precautions",
+    "Activate rapid response",
+    "Administer antihypertensive medication",
+    "Document and reassure"
+  ],
+  correct: 0,
+  rationale: "SCFHS expects recognition and prevention strategies, not emergency escalation."
+},
+
+{
+  id: 37,
+  level: "MEDIUM-HARD",
+  question: "A patient’s HR increases from 84 to 112 bpm over 4 hours postoperatively, BP stable. What should guide the nurse’s response?",
+  options: [
+    "Trend evaluation for early deterioration",
+    "Single vital-sign value",
+    "Patient comfort level only",
+    "Routine documentation schedule"
+  ],
+  correct: 0,
+  rationale: "SCFHS emphasizes trends as early warning signs before collapse."
+},
+
+{
+  id: 38,
+  level: "MEDIUM-HARD",
+  question: "A patient complains of shortness of breath. RR is 22/min, SpO₂ 95%, lungs clear. What is the most appropriate action?",
+  options: [
+    "Assess anxiety and recent activity",
+    "Apply oxygen immediately",
+    "Call the physician",
+    "Activate emergency response"
+  ],
+  correct: 0,
+  rationale: "Not all dyspnea is hypoxia. SCFHS rewards discriminating assessment."
+},
+
+{
+  id: 39,
+  level: "MEDIUM-HARD",
+  question: "A patient’s BP is elevated at 168/94 mmHg, but the patient is calm and asymptomatic. What should the nurse do?",
+  options: [
+    "Recheck BP and assess contributing factors",
+    "Administer antihypertensive stat",
+    "Notify the provider immediately",
+    "Document as critical"
+  ],
+  correct: 0,
+  rationale: "SCFHS penalizes knee-jerk medication without confirmation or assessment."
+},
+
+{
+  id: 40,
+  level: "MEDIUM-HARD",
+  question: "A patient with infection risk has WBC 12,500/mm³, temp 37.8°C, stable vitals. What is the nurse’s best action?",
+  options: [
+    "Monitor trends and assess for symptoms",
+    "Initiate isolation immediately",
+    "Activate sepsis protocol",
+    "Document and ignore"
+  ],
+  correct: 0,
+  rationale: "SCFHS distinguishes early indicators from diagnostic thresholds."
+},
+
+{
+  id: 41,
+  level: "MEDIUM-HARD",
+  question: "A patient reports pain relief but remains tachycardic at 110 bpm. What should the nurse do NEXT?",
+  options: [
+    "Assess for non-pain causes of tachycardia",
+    "Administer more analgesia",
+    "Document response",
+    "Notify provider urgently"
+  ],
+  correct: 0,
+  rationale: "SCFHS tests deeper analysis beyond the obvious cause."
+},
+
+{
+  id: 42,
+  level: "MEDIUM-HARD",
+  question: "A patient with diabetes has fasting glucose of 180 mg/dL but feels well. What is the nurse’s priority?",
+  options: [
+    "Assess adherence and recent intake",
+    "Administer corrective insulin immediately",
+    "Notify provider",
+    "Document as critical"
+  ],
+  correct: 0,
+  rationale: "Judgment trap: stable hyperglycemia requires assessment, not emergency treatment."
+},
+
+{
+  id: 43,
+  level: "MEDIUM-HARD",
+  question: "A patient’s urine output decreases to 25 mL/hr for 2 hours. Vitals are stable. What should the nurse do FIRST?",
+  options: [
+    "Assess hydration status and intake",
+    "Notify the provider",
+    "Administer diuretics",
+    "Document only"
+  ],
+  correct: 0,
+  rationale: "SCFHS prioritizes cause assessment before escalation."
+},
+
+{
+  id: 44,
+  level: "MEDIUM-HARD",
+  question: "A patient reports nausea; vitals are within normal limits. What is the nurse’s best action?",
+  options: [
+    "Assess triggers and timing",
+    "Administer antiemetic immediately",
+    "Notify provider",
+    "Document only"
+  ],
+  correct: 0,
+  rationale: "Assessment-first logic prevents unnecessary medication use."
+},
+
+{
+  id: 45,
+  level: "MEDIUM-HARD",
+  question: "A patient’s respiratory rate is 24/min after ambulation but returns to 18/min at rest. What does this indicate?",
+  options: [
+    "Expected physiological response",
+    "Impending respiratory failure",
+    "Need for emergency oxygen",
+    "Critical deterioration"
+  ],
+  correct: 0,
+  rationale: "SCFHS expects differentiation between exertional and pathological changes."
+},
+
+{
+  id: 46,
+  level: "MEDIUM-HARD",
+  question: "A patient has a mild fever and reports chills but stable BP and HR. What is the nurse’s priority?",
+  options: [
+    "Assess for infection source",
+    "Initiate sepsis protocol",
+    "Administer antibiotics",
+    "Activate emergency response"
+  ],
+  correct: 0,
+  rationale: "Premature sepsis activation is a common SCFHS judgment trap."
+},
+
+{
+  id: 47,
+  level: "MEDIUM-HARD",
+  question: "A patient’s pain score decreases, but BP remains elevated. What should the nurse consider?",
+  options: [
+    "Other causes of hypertension",
+    "Ineffective pain management",
+    "Medication error",
+    "Documentation mistake"
+  ],
+  correct: 0,
+  rationale: "SCFHS tests avoidance of single-cause thinking."
+},
+
+{
+  id: 48,
+  level: "MEDIUM-HARD",
+  question: "A patient shows mild confusion at night but is oriented during the day. Vitals are stable. What is the best action?",
+  options: [
+    "Assess for delirium risk factors",
+    "Activate neurological emergency",
+    "Document and ignore",
+    "Restrain the patient"
+  ],
+  correct: 0,
+  rationale: "SCFHS differentiates delirium risk from acute neurological emergencies."
+},
+
+{
+  id: 49,
+  level: "MEDIUM-HARD",
+  question: "A patient’s heart rate increases after receiving bronchodilator therapy. What should the nurse do?",
+  options: [
+    "Assess expected medication side effects",
+    "Stop the medication immediately",
+    "Activate emergency response",
+    "Document as adverse reaction"
+  ],
+  correct: 0,
+  rationale: "Expected side effects should be recognized to avoid false emergencies."
+},
+
+{
+  id: 50,
+  level: "MEDIUM-HARD",
+  question: "A patient has stable vitals but reports feeling \"something is wrong.\" What should the nurse do?",
+  options: [
+    "Perform a focused reassessment",
+    "Reassure and document",
+    "Ignore subjective report",
+    "Notify provider without assessment"
+  ],
+  correct: 0,
+  rationale: "SCFHS values patient cues as early warning signals requiring reassessment."
+},
+{
+  id: 61,
+  level: "HARD",
+  question: "A competent patient refuses a blood transfusion for religious reasons despite Hb 6 g/dL and hypotension. What should guide the nurse’s action?",
+  options: [
+    "Respect refusal and provide alternative support",
+    "Initiate transfusion due to instability",
+    "Call family to override decision",
+    "Activate emergency response"
+  ],
+  correct: 0,
+  rationale: "SCFHS prioritizes autonomy in competent patients even with abnormal vitals. Forcing treatment is battery."
+},
+
+{
+  id: 62,
+  level: "HARD",
+  question: "A nurse delegates vital-sign measurement to a UAP. The UAP reports BP 78/42 mmHg. What is the nurse’s responsibility?",
+  options: [
+    "Immediately assess the patient personally",
+    "Ask the UAP to recheck later",
+    "Document the finding only",
+    "Notify the physician without assessment"
+  ],
+  correct: 0,
+  rationale: "Assessment cannot be delegated. Failure to verify critical vitals is unsafe delegation."
+},
+
+{
+  id: 63,
+  level: "HARD",
+  question: "A nurse administers medication without checking allergies, causing anaphylaxis. What legal concept applies?",
+  options: [
+    "Negligence",
+    "Assault",
+    "Defamation",
+    "Invasion of privacy"
+  ],
+  correct: 0,
+  rationale: "Failure to meet standard of care related to safety checks constitutes negligence."
+},
+
+{
+  id: 64,
+  level: "HARD",
+  question: "A patient with fluctuating consciousness has no family present and requires emergency surgery. What principle allows treatment?",
+  options: [
+    "Implied consent",
+    "Informed refusal",
+    "Advance directive",
+    "Substituted judgment"
+  ],
+  correct: 0,
+  rationale: "SCFHS expects recognition of implied consent in life-threatening emergencies."
+},
+
+{
+  id: 65,
+  level: "HARD",
+  question: "A nurse notices another nurse documenting care that was not provided. What is the appropriate action?",
+  options: [
+    "Report according to policy",
+    "Ignore to avoid conflict",
+    "Correct the chart silently",
+    "Discuss only with colleagues"
+  ],
+  correct: 0,
+  rationale: "False documentation is fraud. Failure to report implicates professional accountability."
+},
+
+{
+  id: 66,
+  level: "HARD",
+  question: "A patient’s BP drops to 84/46 mmHg. The nurse delays action waiting for physician rounds. What SCFHS failure domain applies?",
+  options: [
+    "Unsafe clinical judgment",
+    "Communication preference",
+    "Knowledge deficit",
+    "Documentation style"
+  ],
+  correct: 0,
+  rationale: "Fail-fast: delayed response to critical vitals equals unsafe judgment."
+},
+
+{
+  id: 67,
+  level: "HARD",
+  question: "Which task is inappropriate to delegate to an LPN?",
+  options: [
+    "Initial patient assessment",
+    "Medication administration",
+    "Wound dressing",
+    "Data collection"
+  ],
+  correct: 0,
+  rationale: "Initial assessment is an RN-only responsibility under delegation law."
+},
+
+{
+  id: 68,
+  level: "HARD",
+  question: "A patient requests discharge against medical advice with BP 190/112 mmHg. What is the nurse’s obligation?",
+  options: [
+    "Explain risks and document refusal",
+    "Physically prevent discharge",
+    "Call security",
+    "Refuse to process paperwork"
+  ],
+  correct: 0,
+  rationale: "Competent patients may refuse care. Education + documentation protect patient and nurse."
+},
+
+{
+  id: 69,
+  level: "HARD",
+  question: "A nurse posts a patient photo on social media without identifiers. Which violation occurs?",
+  options: [
+    "Breach of confidentiality",
+    "Defamation",
+    "Negligence",
+    "Scope violation"
+  ],
+  correct: 0,
+  rationale: "Any identifiable patient information without consent violates confidentiality."
+},
+
+{
+  id: 70,
+  level: "HARD",
+  question: "A UAP reports a patient is ‘not acting right.’ What must the nurse do?",
+  options: [
+    "Assess the patient immediately",
+    "Ask the UAP to observe longer",
+    "Document the comment",
+    "Wait for scheduled vitals"
+  ],
+  correct: 0,
+  rationale: "Nurses are accountable for interpreting and acting on delegated observations."
+},
+
+{
+  id: 71,
+  level: "HARD",
+  question: "A patient has a DNR order but develops severe respiratory distress. What is the nurse permitted to do?",
+  options: [
+    "Provide comfort measures and oxygen",
+    "Initiate CPR",
+    "Call a code blue",
+    "Administer life-prolonging drugs"
+  ],
+  correct: 0,
+  rationale: "DNR limits resuscitation, not comfort or symptom relief."
+},
+
+{
+  id: 72,
+  level: "HARD",
+  question: "A nurse fails to report a critical potassium level and the patient arrests. This is classified as?",
+  options: [
+    "Negligence",
+    "Assault",
+    "Battery",
+    "Informed consent violation"
+  ],
+  correct: 0,
+  rationale: "Omission of required action resulting in harm meets negligence criteria."
+},
+
+{
+  id: 73,
+  level: "HARD",
+  question: "Which scenario represents patient abandonment?",
+  options: [
+    "Leaving the unit without handoff",
+    "Refusing unsafe assignment",
+    "Calling in sick appropriately",
+    "Escalating staffing concerns"
+  ],
+  correct: 0,
+  rationale: "Abandonment occurs when care is terminated without proper transfer."
+},
+
+{
+  id: 74,
+  level: "HARD",
+  question: "A patient lacks capacity and no surrogate is available. Which doctrine applies?",
+  options: [
+    "Emergency doctrine",
+    "Autonomy",
+    "Informed refusal",
+    "Advance directive"
+  ],
+  correct: 0,
+  rationale: "Emergency doctrine allows immediate life-saving care."
+},
+
+{
+  id: 75,
+  level: "HARD",
+  question: "A nurse questions a medication order that exceeds safe dosage. What is the correct action?",
+  options: [
+    "Clarify before administering",
+    "Administer and document",
+    "Ask another nurse to give it",
+    "Hold medication without reporting"
+  ],
+  correct: 0,
+  rationale: "SCFHS expects advocacy and refusal to carry out unsafe orders."
+},
+
+{
+  id: 76,
+  level: "HARD",
+  question: "A patient with infection risk is placed in isolation late despite fever and neutropenia. What failure occurred?",
+  options: [
+    "Infection control breach",
+    "Documentation delay",
+    "Communication preference",
+    "Patient education gap"
+  ],
+  correct: 0,
+  rationale: "Delayed isolation in neutropenia is a critical safety violation."
+},
+
+{
+  id: 77,
+  level: "HARD",
+  question: "A nurse accepts expensive gifts from a patient. This represents?",
+  options: [
+    "Boundary violation",
+    "Therapeutic relationship",
+    "Cultural respect",
+    "Patient advocacy"
+  ],
+  correct: 0,
+  rationale: "High-value gifts compromise professional boundaries."
+},
+
+{
+  id: 78,
+  level: "HARD",
+  question: "A patient becomes aggressive and threatens staff. What is the nurse’s priority?",
+  options: [
+    "Ensure safety and initiate protocol",
+    "Maintain confidentiality",
+    "Document behavior only",
+    "Attempt verbal counseling alone"
+  ],
+  correct: 0,
+  rationale: "Safety overrides confidentiality in imminent threat situations."
+},
+
+{
+  id: 79,
+  level: "HARD",
+  question: "A nurse alters documentation after an incident to avoid blame. This is?",
+  options: [
+    "Fraud",
+    "Negligence",
+    "Error",
+    "Delegation failure"
+  ],
+  correct: 0,
+  rationale: "Intentional falsification is fraud, not simple error."
+},
+
+{
+  id: 80,
+  level: "HARD",
+  question: "A patient requests to review their medical record. What should the nurse do?",
+  options: [
+    "Follow facility access policy",
+    "Refuse access",
+    "Delay indefinitely",
+    "Alter sensitive entries"
+  ],
+  correct: 0,
+  rationale: "Patients have the right to access records through proper channels."
+},
+
+{
+  id: 81,
+  level: "HARD",
+  question: "A nurse fails to perform ordered neuro checks. What legal risk is increased?",
+  options: [
+    "Negligence",
+    "Battery",
+    "Defamation",
+    "Privacy violation"
+  ],
+  correct: 0,
+  rationale: "Failure to carry out orders related to monitoring constitutes negligence."
+},
+
+{
+  id: 82,
+  level: "HARD",
+  question: "A nurse performs a procedure without patient consent. This is?",
+  options: [
+    "Battery",
+    "Negligence",
+    "Defamation",
+    "Abandonment"
+  ],
+  correct: 0,
+  rationale: "Unconsented touching equals battery regardless of intent."
+},
+
+{
+  id: 83,
+  level: "HARD",
+  question: "A patient collapses after repeated ignored low BP readings. What SCFHS principle applies?",
+  options: [
+    "Fail-fast vital-sign recognition",
+    "Patient autonomy",
+    "Comfort prioritization",
+    "Documentation accuracy"
+  ],
+  correct: 0,
+  rationale: "Ignored deterioration is a core SCFHS elimination trigger."
+},
+
+{
+  id: 84,
+  level: "HARD",
+  question: "Which situation requires mandatory reporting?",
+  options: [
+    "Suspected abuse",
+    "Patient dissatisfaction",
+    "Medication refusal",
+    "Family conflict"
+  ],
+  correct: 0,
+  rationale: "Certain conditions legally require reporting regardless of patient wishes."
+},
+
+{
+  id: 85,
+  level: "HARD",
+  question: "A nurse is asked to perform outside scope during staff shortage. What is correct?",
+  options: [
+    "Refuse and escalate",
+    "Perform to help unit",
+    "Ask a colleague to supervise",
+    "Document and proceed"
+  ],
+  correct: 0,
+  rationale: "Staffing issues do not justify scope violations."
+},
+
+{
+  id: 86,
+  level: "HARD",
+  question: "A patient withdraws consent during a procedure. What must the nurse do?",
+  options: [
+    "Stop the procedure",
+    "Continue to completion",
+    "Document and proceed",
+    "Notify family"
+  ],
+  correct: 0,
+  rationale: "Consent can be withdrawn at any time."
+},
+
+{
+  id: 87,
+  level: "HARD",
+  question: "A nurse ignores repeated SpO₂ alarms assuming equipment malfunction. What is this?",
+  options: [
+    "Unsafe practice",
+    "Equipment failure",
+    "Documentation issue",
+    "Acceptable judgment"
+  ],
+  correct: 0,
+  rationale: "Assumptions without assessment violate safety standards."
+},
+
+{
+  id: 88,
+  level: "HARD",
+  question: "A patient requests assisted death where it is illegal. What is the nurse’s role?",
+  options: [
+    "Refuse and provide support",
+    "Assist discreetly",
+    "Report to police immediately",
+    "Ignore the request"
+  ],
+  correct: 0,
+  rationale: "Nurses must follow law while providing emotional support."
+},
+
+{
+  id: 89,
+  level: "HARD",
+  question: "Which patient scenario requires informed consent?",
+  options: [
+    "Surgical procedure",
+    "Routine vital signs",
+    "Bathing assistance",
+    "Oral feeding"
+  ],
+  correct: 0,
+  rationale: "Invasive procedures require informed consent."
+},
+
+{
+  id: 90,
+  level: "HARD",
+  question: "A nurse delays care due to personal conflict with a patient. This violates?",
+  options: [
+    "Ethical duty of care",
+    "Autonomy",
+    "Confidentiality",
+    "Delegation rules"
+  ],
+  correct: 0,
+  rationale: "Personal bias interfering with care breaches ethical standards."
+},
+
+{
+  id: 91,
+  level: "HARD",
+  question: "A patient’s vital signs meet rapid response criteria, but the nurse hesitates. What is the risk?",
+  options: [
+    "Preventable deterioration",
+    "Overreaction",
+    "Protocol misuse",
+    "Patient dissatisfaction"
+  ],
+  correct: 0,
+  rationale: "SCFHS penalizes hesitation when criteria are met."
+},
+
+{
+  id: 92,
+  level: "HARD",
+  question: "A nurse discloses patient information to family without consent. This violates?",
+  options: [
+    "Confidentiality",
+    "Negligence",
+    "Autonomy",
+    "Scope of practice"
+  ],
+  correct: 0,
+  rationale: "Unauthorized disclosure breaches confidentiality."
+},
+
+{
+  id: 93,
+  level: "HARD",
+  question: "A nurse leaves before shift end without report due to fatigue. This is?",
+  options: [
+    "Abandonment",
+    "Self-care",
+    "Ethical refusal",
+    "Appropriate delegation"
+  ],
+  correct: 0,
+  rationale: "Leaving without handoff constitutes abandonment."
+},
+
+{
+  id: 94,
+  level: "HARD",
+  question: "A patient’s family demands continued aggressive treatment against patient wishes. What guides the nurse?",
+  options: [
+    "Patient autonomy",
+    "Family authority",
+    "Cultural preference",
+    "Institutional policy alone"
+  ],
+  correct: 0,
+  rationale: "Competent patient wishes supersede family demands."
+},
+
+{
+  id: 95,
+  level: "HARD",
+  question: "A nurse fails to verify patient identity before medication administration. What risk increases?",
+  options: [
+    "Medication error",
+    "Privacy breach",
+    "Delegation failure",
+    "Documentation delay"
+  ],
+  correct: 0,
+  rationale: "Identity verification is a core safety requirement."
+},
+
+{
+  id: 96,
+  level: "HARD",
+  question: "A patient’s advance directive conflicts with family requests. What must the nurse follow?",
+  options: [
+    "Advance directive",
+    "Family preference",
+    "Physician opinion",
+    "Unit custom"
+  ],
+  correct: 0,
+  rationale: "Legal documents guide care when valid."
+},
+
+{
+  id: 97,
+  level: "HARD",
+  question: "A nurse ignores early signs of sepsis until shock develops. What SCFHS outcome applies?",
+  options: [
+    "Fail-fast elimination",
+    "Partial credit",
+    "Documentation warning",
+    "Minor error"
+  ],
+  correct: 0,
+  rationale: "Delayed recognition of sepsis is an automatic safety failure."
+},
+
+{
+  id: 98,
+  level: "HARD",
+  question: "A nurse performs CPR on a patient with a valid DNR. This is?",
+  options: [
+    "Battery",
+    "Negligence",
+    "Beneficence",
+    "Standard care"
+  ],
+  correct: 0,
+  rationale: "Providing unwanted treatment constitutes battery."
+},
+
+{
+  id: 99,
+  level: "HARD",
+  question: "Which situation requires immediate escalation regardless of workload?",
+  options: [
+    "Rapidly falling blood pressure",
+    "Late medication administration",
+    "Patient dissatisfaction",
+    "Documentation backlog"
+  ],
+  correct: 0,
+  rationale: "Vital-sign deterioration overrides all task priorities."
+},
+
+{
+  id: 100,
+  level: "HARD",
+  question: "A nurse recognizes unsafe staffing but accepts assignment without protest. What risk is assumed?",
+  options: [
+    "Shared liability",
+    "No responsibility",
+    "Automatic immunity",
+    "Manager accountability only"
+  ],
+  correct: 0,
+  rationale: "Accepting unsafe assignments transfers responsibility to the nurse."
+}
+
 ];
 
 // Auto-generate remaining questions to reach 100
