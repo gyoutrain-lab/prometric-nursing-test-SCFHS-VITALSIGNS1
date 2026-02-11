@@ -1,46 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>SCFHS Prometric Vital Signs Tie-Breaker Exam</title>
-<style>
-body { font-family: Arial, sans-serif; background:#f4f6f8; padding:20px; }
-.container { max-width:900px; margin:auto; background:#fff; padding:20px; border-radius:8px; }
-.question { margin-bottom:20px; }
-.options label { display:block; margin:6px 0; }
-.correct { color:green; }
-.incorrect { color:red; }
-.rationale { background:#eef; padding:10px; margin-top:8px; border-radius:6px; }
-.hidden { display:none; }
-button { padding:10px 20px; font-size:16px; }
-</style>
+  <meta charset="UTF-8" />
+  <title>Exam Simulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    .options button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #f9f9f9;
+      cursor: pointer;
+    }
+    .options button:hover {
+      background: #e9eef3;
+    }
+    .correct {
+      background: #d4edda !important;
+      border-color: #28a745;
+    }
+    .wrong {
+      background: #f8d7da !important;
+      border-color: #dc3545;
+    }
+    .rationale {
+      margin-top: 10px;
+      padding: 10px;
+      background: #eef3f7;
+      border-left: 4px solid #007bff;
+    }
+    .nav {
+      margin-top: 20px;
+      text-align: right;
+    }
+    button.main {
+      padding: 10px 18px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
 <div class="container">
+  <h1>Exam Simulator</h1>
 
-<h2>SCFHS Prometric Adaptive Exam</h2>
-<p><b>Focus:</b> Vital-Sign Tie-Breaker Safety</p>
-
-<div id="startScreen">
-<label>Candidate Name / ID (optional):</label><br>
-<input type="text" id="candidate" style="width:100%;padding:8px;"><br><br>
-<button onclick="startExam()">Start Exam</button>
-</div>
-
-<div id="exam" class="hidden"></div>
-
-<div id="result" class="hidden"></div>
-
+  <div id="exam">
+    <p style="text-align:center;">
+      <button class="main" onclick="startExam()">Start Exam</button>
+    </p>
+  </div>
 </div>
 
 <script>
-let current = 0;
-let score = 0;
-
 const questions = [
-/* ========= SAMPLE FORMAT (REPEATED TO 100) ========= */
-{
+  {
+    q: "A nurse is caring for a client receiving continuous enteral feeding via a nasogastric tube. Which action is most important to prevent aspiration?",
+    options: [
+      "Flush the tube every 8 hours",
+      "Check gastric residual once daily",
+      "Keep the head of bed elevated at least 30 degrees",
+      "Warm the feeding solution"
+    ],
+    answer: 2,
+    rationale: "Elevating the head of the bed reduces the risk of aspiration during enteral feeding."
+  },
+  {
+    q: "Which artery is most commonly used to obtain an arterial blood gas (ABG) sample?",
+    options: [
+      "Brachial artery",
+      "Radial artery",
+      "Femoral artery",
+      "Carotid artery"
+    ],
+    answer: 1,
+    rationale: "The radial artery is preferred because it is superficial and has good collateral circulation."
+  },
+  {
+    q: "Which situation requires informed consent from the patient?",
+    options: [
+      "Routine vital signs",
+      "Insertion of an IV line",
+      "Blood transfusion",
+      "Bedside glucose monitoring"
+    ],
+    answer: 2,
+    rationale: "Informed consent is required for invasive procedures such as blood transfusion."
+  },
+  {
 q: "A patient’s blood pressure drops from 118/76 to 88/54 with HR 126. What is the priority nursing action?",
 options: [
 "Recheck blood pressure in 15 minutes",
@@ -1112,63 +1183,83 @@ rationale: "Vital-sign abnormalities + mental change suggest sepsis. Immediate e
   correct: 0,
   rationale: "Accepting unsafe assignments transfers responsibility to the nurse."
 }
-
 ];
 
-}
-function startExam(){
-document.getElementById("startScreen").classList.add("hidden");
-document.getElementById("exam").classList.remove("hidden");
-loadQuestion();
-}
+let current = 0;
+let score = 0;
+let locked = false;
 
-function loadQuestion(){
-const q = questions[current];
-let html = `<div class='question'><b>Question ${current+1} of 100</b><p>${q.q}</p>`;
-html += "<div class='options'>";
-q.options.forEach((opt,i)=>{
-html += `<label><input type='radio' name='opt' value='${i}'> ${opt}</label>`;
-});
-html += "</div><button onclick='submitAnswer()'>Submit</button></div>";
-document.getElementById("exam").innerHTML = html;
+function startExam() {
+  current = 0;
+  score = 0;
+  loadQuestion();
 }
 
-function submitAnswer(){
-const selected = document.querySelector("input[name='opt']:checked");
-if(!selected) return alert("Select an answer");
+function loadQuestion() {
+  locked = false;
+  const q = questions[current];
 
-const q = questions[current];
-let feedback = "";
-if(parseInt(selected.value) === q.answer){
-score++;
-feedback = "<p class='correct'>Correct</p>";
-} else {
-feedback = `<p class='incorrect'>Incorrect</p>
-<div class='rationale'><b>Rationale:</b> ${q.rationale}</div>`;
+  let html = `
+    <div class="question">
+      <b>Question ${current + 1} of ${questions.length}</b>
+      <p>${q.q}</p>
+    </div>
+    <div class="options">
+  `;
+
+  q.options.forEach((opt, i) => {
+    html += `<button onclick="selectAnswer(this, ${i})">${opt}</button>`;
+  });
+
+  html += `
+    </div>
+    <div id="rationale"></div>
+    <div class="nav">
+      <button class="main" onclick="nextQuestion()">Next</button>
+    </div>
+  `;
+
+  document.getElementById("exam").innerHTML = html;
 }
 
-document.getElementById("exam").innerHTML += feedback;
-current++;
+function selectAnswer(btn, index) {
+  if (locked) return;
+  locked = true;
 
-setTimeout(()=>{
-if(current < questions.length){
-loadQuestion();
-} else {
-showResult();
-}
-}, 1200);
+  const q = questions[current];
+  const buttons = document.querySelectorAll(".options button");
+
+  buttons.forEach(b => b.disabled = true);
+
+  if (index === q.answer) {
+    btn.classList.add("correct");
+    score++;
+  } else {
+    btn.classList.add("wrong");
+    buttons[q.answer].classList.add("correct");
+  }
+
+  document.getElementById("rationale").innerHTML =
+    `<div class="rationale"><b>Rationale:</b> ${q.rationale}</div>`;
 }
 
-function showResult(){
-document.getElementById("exam").classList.add("hidden");
-const percent = Math.round((score/100)*100);
-const pass = percent >= 70 ? "PASS" : "FAIL";
-document.getElementById("result").classList.remove("hidden");
-document.getElementById("result").innerHTML =
-`<h3>Exam Result</h3>
-<p>Score: ${score}/100 (${percent}%)</p>
-<p><b>Status: ${pass}</b></p>
-<p>SCFHS Tie-Breaker Rule: Patient safety and vital-sign intervention determine success.</p>`;
+function nextQuestion() {
+  if (current < questions.length - 1) {
+    current++;
+    loadQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  document.getElementById("exam").innerHTML = `
+    <h2>Exam Completed</h2>
+    <p>Your Score: <b>${score} / ${questions.length}</b></p>
+    <p style="text-align:center;">
+      <button class="main" onclick="startExam()">Restart Exam</button>
+    </p>
+  `;
 }
 </script>
 
